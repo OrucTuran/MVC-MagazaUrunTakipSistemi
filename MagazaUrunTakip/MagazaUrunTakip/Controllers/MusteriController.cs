@@ -43,5 +43,22 @@ namespace MagazaUrunTakip.Controllers
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+        public ActionResult MusteriGetir(int id)
+        {
+            var musteri = db.TblMusteri.Find(id);
+            return View(nameof(MusteriGetir), musteri);
+        }
+        public ActionResult MusteriGuncelle(TblMusteri p)
+        {
+            var musteri = db.TblMusteri.Find(p.ID);
+            musteri.Ad = p.Ad;
+            musteri.Soyad = p.Soyad;
+            musteri.Sehir = p.Sehir;
+            musteri.Bakiye = p.Bakiye;
+            musteri.Durum = p.Durum;
+
+            db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

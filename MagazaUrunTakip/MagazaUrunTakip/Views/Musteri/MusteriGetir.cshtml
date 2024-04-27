@@ -1,0 +1,29 @@
+﻿@model MagazaUrunTakip.Models.Entitiy.TblMusteri
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("MusteriGuncelle", "Musteri", FormMethod.Post))
+{
+    <h2>Müşteri Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <br />
+    <label style="margin-top:15px">Müşteri Adı:</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Müşteri Soyadı:</label>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Müşteri Şehir:</label>
+    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Müşteri Bakiye:</label>
+    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Müşteri Durum:</label>
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+    <br />
+    <button class="btn bg-success" style="margin-top:15px">Güncelle</button>
+}
