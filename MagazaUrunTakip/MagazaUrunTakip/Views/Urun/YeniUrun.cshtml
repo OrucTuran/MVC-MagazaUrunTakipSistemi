@@ -1,0 +1,23 @@
+﻿@model MagazaUrunTakip.Models.Entitiy.TblUrunler
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    <h2>Yeni Kategori Ekleme</h2>
+    <br />
+    @*<input type="text" class="form-control" name="Ad" placeholder="Ürün Adını Giriniz..." />*@
+    <label>Ürün Adını Giriniz:</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <label style="margin-top:15px">Ürün Markasını Giriniz:</label>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <label style="margin-top:15px">Ürün Stok Sayısı Giriniz:</label>
+    @Html.TextBoxFor(x => x.StokSayisi, new { @class = "form-control" })
+    <label style="margin-top:15px">Ürün Alış Fiyatı Giriniz:</label>
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <label style="margin-top:15px">Ürün Satış Fiyatı Giriniz:</label>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <label style="margin-top:15px">Ürün Kategorisi Giriniz:</label>
+    @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+    <button class="btn bg-info" style="margin-top:15px">Kaydet</button>
+</form>

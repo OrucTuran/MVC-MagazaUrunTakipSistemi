@@ -16,5 +16,18 @@ namespace MagazaUrunTakip.Controllers
             var urunler = db.TblUrunler.ToList();
             return View(urunler);
         }
+
+        [HttpGet]
+        public ActionResult YeniUrun()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniUrun(TblUrunler p)
+        {
+
+            return View();
+        }
     }
 }
