@@ -1,0 +1,31 @@
+﻿@model MagazaUrunTakip.Models.Entitiy.TblUrunler
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UrunGuncelle", "Kategori", FormMethod.Post))
+{
+    <h2>Ürün Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <br />
+    <label style="margin-top:15px">Ürün Adı:</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Ürün Markası:</label>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Ürün Stok Sayısı:</label>
+    @Html.TextBoxFor(x => x.StokSayisi, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Ürün Alış Fiyatı:</label>
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Ürün Satış Fiyatı:</label>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    <label style="margin-top:15px">Ürün Kategorisi:</label>
+    @Html.DropDownListFor(x => x.TblKategori.ID, (List<SelectListItem>)ViewBag.urunKtg, new { @class = "form-control" })
+    <button class="btn bg-success" style="margin-top:15px">Güncelle</button>
+}

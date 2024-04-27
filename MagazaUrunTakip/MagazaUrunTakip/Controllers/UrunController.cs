@@ -39,5 +39,18 @@ namespace MagazaUrunTakip.Controllers
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+        public ActionResult UrunGetir(int id)
+        {
+            List<SelectListItem> ktg = (from x in db.TblKategori.ToList()
+                                         select new SelectListItem
+                                         {
+                                             Text = x.Ad,
+                                             Value = x.ID.ToString()
+                                         }).ToList();
+            var urun = db.TblUrunler.Find(id);
+            ViewBag.urunKtg = ktg;
+            return View(nameof(UrunGetir), urun);
+        }
     }
 }
