@@ -1,0 +1,35 @@
+﻿@using MagazaUrunTakip.Models.Entitiy
+@model List<TblUrunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ürün Adı</th>
+        <th>Marka</th>
+        <th>Stok Sayısı</th>
+        <th>Alış Fiyat</th>
+        <th>Satış Fiyat</th>
+        <th>Kategori</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Ad</td>
+            <td>@item.Marka</td>
+            <td>@item.StokSayisi</td>
+            <td>@item.AlisFiyat</td>
+            <td>@item.SatisFiyat</td>
+            <td>@item.TblKategori.Ad</td>
+            <td><a href="/Kategori/KategoriSil/@item.ID" class=" btn btn-danger">Sil</a></td>
+            <td><a href="/Kategori/KategoriGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Kategori/YeniKategori" class="btn btn-primary">Yeni Ürün Girişi</a>
