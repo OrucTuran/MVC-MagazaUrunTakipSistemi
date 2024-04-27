@@ -81,3 +81,7 @@ C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\EntityF
 C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\EntityFramework.SqlServer.dll
 C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\EntityFramework.xml
 C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\EntityFramework.SqlServer.xml
+C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\PagedList.dll
+C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\PagedList.Mvc.dll
+C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\PagedList.xml
+C:\GitHub\MVC-MagazaUrunTakipSistemi\MagazaUrunTakip\MagazaUrunTakip\bin\PagedList.Mvc.xml
