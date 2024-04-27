@@ -52,5 +52,20 @@ namespace MagazaUrunTakip.Controllers
             ViewBag.urunKtg = ktg;
             return View(nameof(UrunGetir), urun);
         }
+        public ActionResult UrunGuncelle(TblUrunler p)
+        {
+            var urun = db.TblUrunler.Find(p.ID);
+            urun.Ad = p.Ad;
+            urun.Marka = p.Marka;
+            urun.AlisFiyat = p.AlisFiyat;
+            urun.SatisFiyat = p.SatisFiyat;
+            urun.StokSayisi = p.StokSayisi;
+
+            var ktg = db.TblKategori.Where(x => x.ID == p.TblKategori.ID).FirstOrDefault();
+            urun.Kategori = ktg.ID;
+            db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+
+        }
     }
 }
