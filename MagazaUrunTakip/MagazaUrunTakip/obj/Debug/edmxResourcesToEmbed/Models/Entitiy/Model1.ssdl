@@ -16,6 +16,7 @@
     <Property Name="Soyad" Type="varchar" MaxLength="30" />
     <Property Name="Sehir" Type="varchar" MaxLength="20" />
     <Property Name="Bakiye" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <EntityType Name="TblPersonel">
     <Key>

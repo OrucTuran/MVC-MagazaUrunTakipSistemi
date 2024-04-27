@@ -12,6 +12,7 @@
     <EntitySetMapping Name="TblMusteri">
       <EntityTypeMapping TypeName="DbMvcStokModel.TblMusteri">
         <MappingFragment StoreEntitySet="TblMusteri">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="Soyad" ColumnName="Soyad" />

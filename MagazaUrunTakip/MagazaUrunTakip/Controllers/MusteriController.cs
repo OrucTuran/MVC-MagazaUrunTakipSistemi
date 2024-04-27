@@ -19,7 +19,7 @@ namespace MagazaUrunTakip.Controllers
         {
             //var musteriListe = db.TblMusteri.ToList();
 
-            var musteriListe = db.TblMusteri.ToList().ToPagedList(sayfa, 10);
+            var musteriListe = db.TblMusteri.Where(x => x.Durum == true).ToList().ToPagedList(sayfa, 10);
             return View(musteriListe);
         }
 
@@ -33,6 +33,13 @@ namespace MagazaUrunTakip.Controllers
         public ActionResult YeniMusteri(TblMusteri p)
         {
             var musteri = db.TblMusteri.Add(p);
+            db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+        public ActionResult MusteriSil(TblMusteri p)
+        {
+            var silinecekMusteri = db.TblMusteri.Find(p.ID);
+            silinecekMusteri.Durum = false;
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

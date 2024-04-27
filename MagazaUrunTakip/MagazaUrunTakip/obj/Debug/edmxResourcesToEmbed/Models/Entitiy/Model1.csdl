@@ -18,6 +18,7 @@
     <Property Name="Sehir" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Bakiye" Type="Decimal" Precision="18" Scale="2" />
     <NavigationProperty Name="TblSatislar" Relationship="Self.FK_TblSatislar_TblMusteri" FromRole="TblMusteri" ToRole="TblSatislar" />
+    <Property Name="Durum" Type="Boolean" />
   </EntityType>
   <EntityType Name="TblPersonel">
     <Key>
