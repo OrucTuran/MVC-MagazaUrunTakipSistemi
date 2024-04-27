@@ -45,6 +45,7 @@
     <EntitySetMapping Name="TblUrunler">
       <EntityTypeMapping TypeName="DbMvcStokModel.TblUrunler">
         <MappingFragment StoreEntitySet="TblUrunler">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="Marka" ColumnName="Marka" />

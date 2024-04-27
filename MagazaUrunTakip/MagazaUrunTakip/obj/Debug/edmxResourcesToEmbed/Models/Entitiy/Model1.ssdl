@@ -48,6 +48,7 @@
     <Property Name="AlisFiyat" Type="decimal" Precision="18" Scale="2" />
     <Property Name="SatisFiyat" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Kategori" Type="int" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <Association Name="FK_TblSatislar_TblMusteri">
     <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
