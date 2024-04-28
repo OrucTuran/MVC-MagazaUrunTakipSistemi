@@ -10,15 +10,18 @@
     @*<input type="text" class="form-control" name="Ad" placeholder="Ürün Adını Giriniz..." />*@
     <label>Müşter Adını Giriniz:</label>
     @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
+    <br />
     <label style="margin-top:15px">Müşteri Soyadını Giriniz:</label>
     @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(x => x.Soyad, "", new { @style = "color:red" })
+    <br />
     <label style="margin-top:15px">Müşteri Şehir Giriniz:</label>
     @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
-
+    <br />
     <label style="margin-top:15px">Müşteri Bakiye Giriniz:</label>
     @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(x => x.Bakiye, "", new { @style = "color:red" })
+    <br />
     <button class="btn bg-info" style="margin-top:15px">Kaydet</button>
 </form>

@@ -11,7 +11,8 @@ namespace MagazaUrunTakip.Models.Entitiy
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblMusteri
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,12 @@ namespace MagazaUrunTakip.Models.Entitiy
         }
     
         public int ID { get; set; }
+        [Required(ErrorMessage = "Ad Alanýný Boþ Geçemezsiniz.")]
         public string Ad { get; set; }
+        [Required(ErrorMessage = "Soyad Alanýný Boþ Geçemezsiniz.")]
         public string Soyad { get; set; }
         public string Sehir { get; set; }
+        [Required(ErrorMessage = "Bakiye Alanýný Boþ Geçemezsiniz.")]
         public Nullable<decimal> Bakiye { get; set; }
         public Nullable<bool> Durum { get; set; }
     

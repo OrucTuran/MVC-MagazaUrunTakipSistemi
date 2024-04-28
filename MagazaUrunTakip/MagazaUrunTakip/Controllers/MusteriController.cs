@@ -32,7 +32,12 @@ namespace MagazaUrunTakip.Controllers
         [HttpPost]
         public ActionResult YeniMusteri(TblMusteri p)
         {
-            var musteri = db.TblMusteri.Add(p);
+            if (!ModelState.IsValid)
+            {
+                return View(nameof(YeniMusteri));
+            }
+            p.Durum = true;
+            db.TblMusteri.Add(p);
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
