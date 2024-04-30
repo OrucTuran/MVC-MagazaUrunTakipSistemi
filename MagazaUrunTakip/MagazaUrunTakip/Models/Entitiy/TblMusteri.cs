@@ -22,12 +22,13 @@ namespace MagazaUrunTakip.Models.Entitiy
         }
     
         public int ID { get; set; }
-        [Required(ErrorMessage = "Ad Alanýný Boþ Geçemezsiniz.")]
+        [Required(ErrorMessage = "Ad Alanini Bos Gecemezsiniz.")]
         public string Ad { get; set; }
-        [Required(ErrorMessage = "Soyad Alanýný Boþ Geçemezsiniz.")]
+        [Required(ErrorMessage = "Soyad Alanini Bos Gecemezsiniz.")]
         public string Soyad { get; set; }
+        public string MstAdSoyad => $"{Ad} {Soyad}";
         public string Sehir { get; set; }
-        [Required(ErrorMessage = "Bakiye Alanýný Boþ Geçemezsiniz.")]
+        [Required(ErrorMessage = "Bakiye Alanini Bos Gecemezsiniz.")]
         public Nullable<decimal> Bakiye { get; set; }
         public Nullable<bool> Durum { get; set; }
     

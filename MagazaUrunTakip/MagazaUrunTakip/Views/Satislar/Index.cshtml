@@ -1,0 +1,29 @@
+﻿@using MagazaUrunTakip.Models.Entitiy
+@model List<TblSatislar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ürün</th>
+        <th>Personel</th>
+        <th>Müşteri</th>
+        <th>Fiyat</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.TblUrunler.Ad</td>
+            <td>@item.TblPersonel.PrsAdSoyad</td>
+            <td>@item.TblMusteri.MstAdSoyad</td>
+            <td>@item.Fiyat</td>
+            <td>@(item.Tarih.HasValue ? item.Tarih.Value.ToString("dd.MM.yyyy") : "")</td>
+        </tr>
+    }
+</table>
+<a href="/Satislar/YeniSatis" class="btn btn-primary">Yeni Satış İşlemi</a>

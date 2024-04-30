@@ -23,6 +23,7 @@ namespace MagazaUrunTakip.Models.Entitiy
         public int ID { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
+        public string PrsAdSoyad => $"{Ad} {Soyad}";
         public string Departman { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

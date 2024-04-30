@@ -41,7 +41,7 @@
           <Property Name="Personel" Type="int" />
           <Property Name="Musteri" Type="int" />
           <Property Name="Fiyat" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Tarih" Type="smalldatetime" />
+          <Property Name="Tarih" Type="date" />
         </EntityType>
         <EntityType Name="TblUrunler">
           <Key>

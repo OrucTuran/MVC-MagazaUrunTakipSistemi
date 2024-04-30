@@ -138,6 +138,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\MusteriController.cs" />
+    <Compile Include="Controllers\SatislarController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -238,6 +239,8 @@
     <Content Include="Views\Musteri\Index.cshtml" />
     <Content Include="Views\Musteri\YeniMusteri.cshtml" />
     <Content Include="Views\Musteri\MusteriGetir.cshtml" />
+    <Content Include="Views\Satislar\Index.cshtml" />
+    <Content Include="Views\Satislar\YeniSatis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
