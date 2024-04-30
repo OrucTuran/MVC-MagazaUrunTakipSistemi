@@ -19,8 +19,8 @@
         <tr>
             <td>@item.ID</td>
             <td>@item.TblUrunler.Ad</td>
-            <td>@item.TblPersonel.PrsAdSoyad</td>
-            <td>@item.TblMusteri.MstAdSoyad</td>
+            <td>@item.TblPersonel.Ad @item.TblPersonel.Soyad</td>
+            <td>@item.TblMusteri.Ad @item.TblMusteri.Soyad</td>
             <td>@item.Fiyat</td>
             <td>@(item.Tarih.HasValue ? item.Tarih.Value.ToString("dd.MM.yyyy") : "")</td>
         </tr>

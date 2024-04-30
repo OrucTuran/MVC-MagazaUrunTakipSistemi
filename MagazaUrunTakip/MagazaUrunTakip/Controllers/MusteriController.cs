@@ -14,7 +14,7 @@ namespace MagazaUrunTakip.Controllers
         // GET: Musteri
 
         DbMvcStokEntities db = new DbMvcStokEntities();
-
+        [Authorize]
         public ActionResult Index(int sayfa=1)
         {
             //var musteriListe = db.TblMusteri.ToList();
