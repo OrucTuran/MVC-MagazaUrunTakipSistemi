@@ -33,7 +33,7 @@ namespace MagazaUrunTakip.Controllers
             List<SelectListItem> personel = (from x in db.TblPersonel.ToList()
                                              select new SelectListItem
                                              {
-                                                 Text = x.PrsAdSoyad + " " + "(" + x.Departman + ")",
+                                                 Text = $"{x.Ad} {x.Soyad} ({x.Departman})",
                                                  Value = x.ID.ToString()
                                              }).ToList();
             ViewBag.dropPersonel = personel;
@@ -42,7 +42,7 @@ namespace MagazaUrunTakip.Controllers
             List<SelectListItem> musteri = (from x in db.TblMusteri.ToList()
                                             select new SelectListItem
                                             {
-                                                Text = x.MstAdSoyad,
+                                                Text = $"{x.Ad} {x.Soyad}",
                                                 Value = x.ID.ToString()
                                             }).ToList();
             ViewBag.dropMusteri = musteri;

@@ -11,10 +11,16 @@ namespace MagazaUrunTakip.Controllers
     {
         // GET: Urun
         DbMvcStokEntities db = new DbMvcStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var urunler = db.TblUrunler.Where(x => x.Durum == true).ToList();
-            return View(urunler);
+            var urunler = db.TblUrunler.Where(x => x.Durum == true);
+
+            if (!String.IsNullOrEmpty(p))
+            {
+                urunler = urunler.Where(x => x.Ad.Contains(p));
+            }
+
+            return View(urunler.ToList());
         }
 
         [HttpGet]
