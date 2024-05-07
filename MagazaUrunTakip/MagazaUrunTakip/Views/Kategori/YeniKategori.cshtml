@@ -1,4 +1,4 @@
-﻿
+﻿@model MagazaUrunTakip.Models.Entitiy.TblKategori
 @{
     ViewBag.Title = "YeniKategori";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -6,6 +6,9 @@
 <form method="post">
     <h2>Yeni Kategori Ekleme</h2>
     <br />
-    <input type="text" class="form-control" name="Ad" placeholder="Kategori Adını Giriniz..." />
+    <label>Kategori Adını Giriniz:</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
+    <br />
     <button class="btn bg-info" style="margin-top:15px">Kaydet</button>
 </form>

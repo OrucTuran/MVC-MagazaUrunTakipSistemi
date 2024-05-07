@@ -11,7 +11,8 @@ namespace MagazaUrunTakip.Models.Entitiy
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TblKategori
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,7 @@ namespace MagazaUrunTakip.Models.Entitiy
         }
     
         public int ID { get; set; }
+        [Required(ErrorMessage = "Ad Alanini Bos Gecemezsiniz.")]
         public string Ad { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

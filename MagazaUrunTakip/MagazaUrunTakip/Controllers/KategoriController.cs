@@ -24,6 +24,10 @@ namespace MagazaUrunTakip.Controllers
         [HttpPost]
         public ActionResult YeniKategori(TblKategori p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(nameof(YeniKategori));
+            }
             db.TblKategori.Add(p);
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
