@@ -27,3 +27,31 @@
     }
 </table>
 <a href="/Satislar/YeniSatis" class="btn btn-primary">Yeni Satış İşlemi</a>
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Modal1">Yeni Satış İşlemi / Pop-Up</button> 
+<div class="modal"id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Satış Pop-Up(inaktif alan)</h2>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <label>Ürün :</label>
+                    <input type="text" name="Urun" class="form-control" />
+                    <br />
+                    <label>Personel :</label>
+                    <input type="text" name="Marka" class="form-control" />
+                    <br />
+                    <label>Müşteri :</label>
+                    <input type="text" name="Marka" class="form-control" />
+                    <br />
+                    <label>Fiyat :</label>
+                    <input type="text" name="Marka" class="form-control" />
+                    <br />
+                    <button type="submit" class="btn bg-info">Satış</button>
+                    <button type="reset" data-dismiss="modal" class="btn bg-danger">Vazgeç</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
