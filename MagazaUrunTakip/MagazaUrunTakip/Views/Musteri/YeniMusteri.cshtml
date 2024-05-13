@@ -9,19 +9,24 @@
     <br />
     @*<input type="text" class="form-control" name="Ad" placeholder="Ürün Adını Giriniz..." />*@
     <label>Müşter Adını Giriniz:</label>
-    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @required = "required", @maxlength = "30", placeholder = "Müşteri adını giriniz.." })
     @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
     <br />
     <label style="margin-top:15px">Müşteri Soyadını Giriniz:</label>
-    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @required = "required", @maxlength = "30", placeholder = "Müşteri soy adını giriniz.." })
     @Html.ValidationMessageFor(x => x.Soyad, "", new { @style = "color:red" })
     <br />
     <label style="margin-top:15px">Müşteri Şehir Giriniz:</label>
-    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control", @required = "required", @maxlength = "20", placeholder = "Müşteri şehir bilgisi giriniz.." })
     <br />
     <label style="margin-top:15px">Müşteri Bakiye Giriniz:</label>
-    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control", @required = "required", placeholder = "Müşteri bakiye bilgisi giriniz.." })
     @Html.ValidationMessageFor(x => x.Bakiye, "", new { @style = "color:red" })
     <br />
-    <button class="btn bg-info" style="margin-top:15px">Kaydet</button>
+    <button class="btn bg-info" id="btnKaydet" style="margin-top:15px">Kaydet</button>
+    <script>
+        $('#btnKaydet').click(function () {
+            alert('Müşteri Ekleme İşlemi Yapıldı . . .')
+        });
+    </script>
 </form>
