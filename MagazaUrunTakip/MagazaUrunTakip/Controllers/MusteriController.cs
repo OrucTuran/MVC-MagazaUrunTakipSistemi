@@ -15,13 +15,20 @@ namespace MagazaUrunTakip.Controllers
 
         DbMvcStokEntities db = new DbMvcStokEntities();
         [Authorize]
-        public ActionResult Index(int sayfa=1)
+        public ActionResult Index(int sayfa = 1, string p = "")
         {
-            //var musteriListe = db.TblMusteri.ToList();
+            var musteriListe = db.TblMusteri.Where(x => x.Durum == true);
 
-            var musteriListe = db.TblMusteri.Where(x => x.Durum == true).ToList().ToPagedList(sayfa, 10);
-            return View(musteriListe);
+            if (!String.IsNullOrEmpty(p))
+            {
+                musteriListe = musteriListe.Where(x => x.Ad.Contains(p));
+            }
+            musteriListe = musteriListe.OrderBy(x => x.ID);
+            var sayfalananMusteriListe = musteriListe.ToPagedList(sayfa, 10);
+            return View(sayfalananMusteriListe);
         }
+
+
 
         [HttpGet]
         public ActionResult YeniMusteri()
