@@ -20,17 +20,19 @@ namespace MagazaUrunTakip.Models.Entitiy
         {
             this.TblSatislar = new HashSet<TblSatislar>();
         }
-    
+
         public int ID { get; set; }
         [Required(ErrorMessage = "Ad Alanini Bos Gecemezsiniz.")]
+        [StringLength(20, ErrorMessage = "Ad alani 20 karakterden uzun olamaz.")]
         public string Ad { get; set; }
         [Required(ErrorMessage = "Soyad Alanini Bos Gecemezsiniz.")]
+        [StringLength(20, ErrorMessage = "Ad alani 20 karakterden uzun olamaz.")]
         public string Soyad { get; set; }
         public string Sehir { get; set; }
         [Required(ErrorMessage = "Bakiye Alanini Bos Gecemezsiniz.")]
         public Nullable<decimal> Bakiye { get; set; }
         public Nullable<bool> Durum { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblSatislar> TblSatislar { get; set; }
     }

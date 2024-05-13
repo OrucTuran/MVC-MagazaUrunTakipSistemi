@@ -14,6 +14,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <EntityType Name="TblMusteri">
     <Key>

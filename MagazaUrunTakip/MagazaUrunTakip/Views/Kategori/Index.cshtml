@@ -1,5 +1,7 @@
 ﻿@using MagazaUrunTakip.Models.Entitiy
-@model List<TblKategori>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TblKategori>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -22,4 +24,5 @@
         </tr>
     }
 </table>
-<a href="/Kategori/YeniKategori"class="btn btn-primary">Yeni Kategori</a>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action(ViewBag.Title, new { sayfa }))
+<a href="/Kategori/YeniKategori" class="btn btn-primary">Yeni Kategori</a>

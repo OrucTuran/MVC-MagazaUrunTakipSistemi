@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using MagazaUrunTakip.Models.Entitiy;
 
 namespace MagazaUrunTakip.Controllers
@@ -11,9 +12,9 @@ namespace MagazaUrunTakip.Controllers
     {
         // GET: Kategori
         DbMvcStokEntities db = new DbMvcStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            List<TblKategori> kategoriler = db.TblKategori.ToList();
+            var kategoriler = db.TblKategori.Where(x => x.Durum == true).ToList().ToPagedList(sayfa, 10);
             return View(kategoriler);
         }
         [HttpGet]
@@ -36,7 +37,7 @@ namespace MagazaUrunTakip.Controllers
         public ActionResult KategoriSil(int id)
         {
             var kategori = db.TblKategori.Find(id);
-            db.TblKategori.Remove(kategori);
+            kategori.Durum = false;
             db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

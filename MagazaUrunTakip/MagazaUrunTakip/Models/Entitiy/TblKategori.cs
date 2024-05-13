@@ -20,11 +20,13 @@ namespace MagazaUrunTakip.Models.Entitiy
         {
             this.TblUrunler = new HashSet<TblUrunler>();
         }
-    
+
         public int ID { get; set; }
         [Required(ErrorMessage = "Ad Alanini Bos Gecemezsiniz.")]
+        [StringLength(30,ErrorMessage ="Kategori ismi 30 karakterden uzun olamaz.")]
         public string Ad { get; set; }
-    
+        public Nullable<bool> Durum { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblUrunler> TblUrunler { get; set; }
     }

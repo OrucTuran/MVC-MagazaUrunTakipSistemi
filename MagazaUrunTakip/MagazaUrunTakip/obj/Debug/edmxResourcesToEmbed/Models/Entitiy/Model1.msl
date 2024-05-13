@@ -4,6 +4,7 @@
     <EntitySetMapping Name="TblKategori">
       <EntityTypeMapping TypeName="DbMvcStokModel.TblKategori">
         <MappingFragment StoreEntitySet="TblKategori">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
         </MappingFragment>
