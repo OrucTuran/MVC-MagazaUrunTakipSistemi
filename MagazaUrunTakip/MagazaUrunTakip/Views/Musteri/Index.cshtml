@@ -10,24 +10,26 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
-        <th>Ad</th>
-        <th>Soyad</th>
-        <th>Şehir</th>
-        <th>Bakiye</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Ad</th>
+        <th class="text-center">Soyad</th>
+        <th class="text-center">Şehir</th>
+        <th class="text-center">Bakiye</th>
+        <th class="text-center">Sil</th>
+        <th class="text-center">Güncelle</th>
+        <th class="text-center">Uyarı</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.ID</td>
-            <td>@item.Ad</td>
-            <td>@item.Soyad</td>
-            <td>@item.Sehir</td>
-            <td>@item.Bakiye</td>
-            <td><a href="/Musteri/MusteriSil/@item.ID" class=" btn btn-danger">Sil</a></td>
-            <td><a href="/Musteri/MusteriGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
+            <td class="text-center">@item.ID</td>
+            <td class="text-center">@item.Ad</td>
+            <td class="text-center">@item.Soyad</td>
+            <td class="text-center">@item.Sehir</td>
+            <td class="text-center">@item.Bakiye</td>
+            <td class="text-center"><a href="/Musteri/MusteriSil/@item.ID" class=" btn btn-danger">Sil</a></td>
+            <td class="text-center"><a href="/Musteri/MusteriGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
+            <td class="text-center">@Html.ActionLink("Sil", "MusteriSil", new { item.ID }, new { @class = "btn btn-warning", @onclick = "return confirm('Gerçekten silmek istiyor musunuz?')" })</td>
         </tr>
     }
 </table>

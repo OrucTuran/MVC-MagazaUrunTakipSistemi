@@ -7,22 +7,22 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
-        <th>Ürün</th>
-        <th>Personel</th>
-        <th>Müşteri</th>
-        <th>Fiyat</th>
-        <th>Tarih</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Ürün</th>
+        <th class="text-center">Personel</th>
+        <th class="text-center">Müşteri</th>
+        <th class="text-center">Fiyat</th>
+        <th class="text-center">Tarih</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.ID</td>
-            <td>@item.TblUrunler.Ad</td>
-            <td>@item.TblPersonel.Ad @item.TblPersonel.Soyad</td>
-            <td>@item.TblMusteri.Ad @item.TblMusteri.Soyad</td>
-            <td>@item.Fiyat</td>
-            <td>@(item.Tarih.HasValue ? item.Tarih.Value.ToString("dd.MM.yyyy") : "")</td>
+            <td class="text-center">@item.ID</td>
+            <td class="text-center">@item.TblUrunler.Ad</td>
+            <td class="text-center">@item.TblPersonel.Ad @item.TblPersonel.Soyad</td>
+            <td class="text-center">@item.TblMusteri.Ad @item.TblMusteri.Soyad</td>
+            <td class="text-center">@item.Fiyat ₺</td>
+            <td class="text-center">@(item.Tarih.HasValue ? item.Tarih.Value.ToString("dd.MM.yyyy") : "")</td>
         </tr>
     }
 </table>

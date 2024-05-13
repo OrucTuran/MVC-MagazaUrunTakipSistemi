@@ -9,18 +9,18 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
-        <th>Kategori</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Kategori</th>
+        <th class="text-center">Sil</th>
+        <th class="text-center">Güncelle</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.ID</td>
-            <td>@item.Ad</td>
-            <td><a href="/Kategori/KategoriSil/@item.ID" class=" btn btn-danger">Sil</a></td>
-            <td><a href="/Kategori/KategoriGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
+            <td class="text-center">@item.ID</td>
+            <td class="text-center">@item.Ad</td>
+            <td class="text-center"><a href="/Kategori/KategoriSil/@item.ID" class=" btn btn-danger">Sil</a></td>
+            <td class="text-center"><a href="/Kategori/KategoriGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>

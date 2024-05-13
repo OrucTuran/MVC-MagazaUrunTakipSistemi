@@ -8,35 +8,35 @@
 {
     <p>
         Ürün Adı: @Html.TextBox("p")
-        <input type="submit"value="Ara" />
+        <input type="submit" value="Ara" />
     </p>
 }
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
-        <th>Ürün Adı</th>
-        <th>Marka</th>
-        <th>Stok Sayısı</th>
-        <th>Alış Fiyat</th>
-        <th>Satış Fiyat</th>
-        <th>Kategori</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Ürün Adı</th>
+        <th class="text-center">Marka</th>
+        <th class="text-center">Stok Sayısı</th>
+        <th class="text-center">Alış Fiyat</th>
+        <th class="text-center">Satış Fiyat</th>
+        <th class="text-center">Kategori</th>
+        <th class="text-center">Sil</th>
+        <th class="text-center">Güncelle</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.ID</td>
-            <td>@item.Ad</td>
-            <td>@item.Marka</td>
-            <td>@item.StokSayisi</td>
-            <td>@item.AlisFiyat</td>
-            <td>@item.SatisFiyat</td>
-            <td>@item.TblKategori.Ad</td>
-            <td><a href="/Urun/UrunSil/@item.ID" class=" btn btn-danger">Sil</a></td>
-            <td><a href="/Urun/UrunGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
+            <td class="text-center">@item.ID</td>
+            <td class="text-center">@item.Ad</td>
+            <td class="text-center">@item.Marka</td>
+            <td class="text-center">@item.StokSayisi</td>
+            <td class="text-center">@item.AlisFiyat</td>
+            <td class="text-center">@item.SatisFiyat</td>
+            <td class="text-center">@item.TblKategori.Ad</td>
+            <td class="text-center"><a href="/Urun/UrunSil/@item.ID" class=" btn btn-danger">Sil</a></td>
+            <td class="text-center"><a href="/Urun/UrunGetir/@item.ID" class=" btn btn-success">Güncelle</a></td>
         </tr>
-        }
+    }
 </table>
 <a href="/Urun/YeniUrun" class="btn btn-primary">Yeni Ürün Girişi</a>
