@@ -8,23 +8,23 @@
     <br />
     @*<input type="text" class="form-control" name="Ad" placeholder="Ürün Adını Giriniz..." />*@
     <label>Ürün Adını Giriniz:</label>
-    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @required = "required", @maxlength = "50", placeholder = "Ürün adını giriniz.." })
 
     <label style="margin-top:15px">Ürün Markasını Giriniz:</label>
-    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control", @required = "required", @maxlength = "50", placeholder = "Ürün markası giriniz.." })
 
     <label style="margin-top:15px">Ürün Stok Sayısı Giriniz:</label>
-    @Html.TextBoxFor(x => x.StokSayisi, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.StokSayisi, new { @class = "form-control", @required = "required", placeholder = "Ürün stok sayısı giriniz.." })
 
     <label style="margin-top:15px">Ürün Alış Fiyatı Giriniz:</label>
-    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control", @required = "required", placeholder = "Ürün alış fiyatı giriniz.." })
 
     <label style="margin-top:15px">Ürün Satış Fiyatı Giriniz:</label>
-    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control", @required = "required", placeholder = "Ürün satış fiyatı giriniz.." })
 
     <label style="margin-top:15px">Ürün Kategorisi Giriniz:</label>
     @*@Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })*@
-    @Html.DropDownListFor(x => x.TblKategori.ID, (List<SelectListItem>)ViewBag.drop, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.TblKategori.ID, (List<SelectListItem>)ViewBag.drop, new { @class = "form-control", @required = "required" })
 
     <button class="btn bg-info" style="margin-top:15px">Kaydet</button>
 </form>
